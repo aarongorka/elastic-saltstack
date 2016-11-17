@@ -1,0 +1,20 @@
+{% set logstash = salt['grains.filter_by']({
+  'Debian': {
+    'name': 'logstash',
+    'service': 'logstash',
+    'conf': '/etc/logstash',
+    'user': 'logstash',
+    'group': 'logstash',
+    'utils': 'logstash-utils',
+    'datadir': '/var/logstash',
+  },
+  'RedHat': {
+    'name': 'logstash',
+    'service': 'logstash',
+    'conf': '/etc/logstash',
+    'user': 'logstash',
+    'group': 'logstash',
+    'utils': 'logstash-tools',
+    'htmldir': '/var/logstash',
+  },
+}, merge=salt['pillar.get']('logstash:lookup')) %}
