@@ -1,5 +1,5 @@
 # elastic-saltstack
-A SaltStack formula to deploy Elastic Stack 5 on a server.
+A SaltStack formula to deploy Elastic Stack 5 on one or more servers.
 
 Requires the following pillar settings:
 
